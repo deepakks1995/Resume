@@ -1,0 +1,306 @@
+%-------------------------
+% Resume in Latex
+% Author : Deepak Sharma
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage{fontawesome}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.375in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeNewItem}[3]{
+  \item\small{
+    \textbf{#1:}{\hfill {#2}\\}{ #3\vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\newcommand{\resumeNewSubItem}[3]{\resumeNewItem{#1}{#2}{#3}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large {Deepak Sharma}}} \\
+  B.Tech, Computer Science and Engineering \\
+  Indian Institute of Technology Mandi \\
+  \href{mailto:deepakks1995@gmail.com}{deepakks1995@gmail.com} \\
+  \faGithub\href{https://github.com/deepakks1995}{ deepakks1995} \\
+    \faLinkedin\href{https://www.linkedin.com/in/deepakks1995}{ deepakks1995} \\ 
+  +91-8894054791
+\end{tabular*}
+
+%-----------EXPERIENCE-----------------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+    
+    \resumeSubheading
+      {Khosla Labs}{Bangalore, India}
+      {Associate Software Engineer}{July 2018 - Present}
+      \resumeItemListStart
+        \item {
+            Lead the ML team to build classifiers (with limited data), train Object-Detection models like Mask-RCNN, Faster-RCNN, build OCR parser for Google Vision Api supporting multiple documents.
+        }
+        \item {
+            Converted tensorflow models like Mask-RCNN, Faster-RCNN, Mobilenet to servables(accepting base64 images), later deploying them using tensorflow serving.
+        }
+        \item {
+            Build a Document scanner using OpenCV to detect the edges of document while scanning. 
+        }
+        \item {
+            Used OpenCv to implement OpenCv's MSER algorithm for getting bounding boxes around texts, later build a python library to add noise around an ID image also supporting random background addition(training Object Detection), rotation, cropping around the edges.
+        }
+        
+        \item {
+            Worked in a team handling a set of multi-tenant microservices using MySQL. Developed new microservices,
+            enhanced database schemas and testing frameworks to accommodate new use cases and built APIs.
+        }
+        \item {
+            Developed a web portal using Angular 6 for client onboarding.
+        }
+        \item {
+            Developed and managed Api's and android app for a new product, requiring QR Code reading both from camera as well as from scanned Pdf, reading compressed xml data and verifying its signature.
+        }
+      
+    %   \item {
+    %         Worked with the data migration team to map older databases to newer ones, and then to redirect monolith api's to their corresponding microservices.
+    %     }
+        % \item {
+        %     Worked on proprietary framework, built on spring boot for api development.
+        % }
+        % \item {
+        %     Integrated the developed api's with the testing framework, also extended the framework to support functional testing using mockito. Created and executed unit tests and performed basic api testing.
+        % }
+        
+        
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {Khosla Labs}{Bangalore, India}
+      {Internship}{Dec 2016 - Feb 2017}
+      \resumeItemListStart
+        \item {
+            Developed a dashboard named 'Data-Juno Monitor' on top of Angular JS framework to feed live data into different visualizations
+        }
+        \item {
+            Used D3js and Rickshaw JS(an open-source JavaScript toolkit) for implementing interative visualizations like Tree Map, Pie Charts, Forced Directed Graphs etc.
+        }
+        % \item
+        %   {My work also included writing Android Background Services to fetch data from the client side}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------------
+\section{Projects}
+  \resumeSubHeadingListStart
+    \resumeNewSubItem{Major Technical Project}{(Aug 2017 - May 2018), IIT Mandi}{
+      The project aimed at creating a neural network that implements deep hashing and convert an image into a low dimensional binary vector (hash). Datasets consists of bio-metric images like fingerprints, iris, knuckle images etc. Challenges include:
+      \begin{itemize}
+        \item Handling alignment, translation of images.
+        \item Minimizing quantization loss of obtained binary vectors.
+        \item Propose an efficient indexing problem. 
+      \end{itemize}
+      Implemented \href{https://arxiv.org/abs/1801.08360}{DADH} network, as to get the distance between the binary encoding of the bio-metric images. Images were preprocessed using an Auto Encoder which was trained on FVC2002, FVC2004 and FVC2006 datasets.
+      \linebreak
+    }
+
+    \resumeNewSubItem{FPSensorNet-A Deep CNN for Fingerprint Sensors Classification}{(Mar 2017 - May 2017), IIT Mandi}{
+        \begin{itemize} 
+          \item Classify fingerprint images on the basis of Sensors
+          \item Resnet50 layer network vs VGG16 was used to extract quality features of images.
+          \item Resnet50 layers were pruned and unnecessary layers were removed by applying a dropout 
+          \item Added various factors such as Noise, Occlusion, Rotation to test the efficiency of network
+          % \item Paper "FPSensorNet: A Deep CNN for Fingerprint Sensors Classification" submitted to WIFS 2017.
+        \end{itemize}
+    }
+    \resumeNewSubItem{On the Fly Encryptor}{ VI Semester, IIT Mandi}{
+        Modified Linux Kernel 4.1.0 to implement a file encryption mechanism without affecting user experience. 
+        \begin{itemize} 
+          \item Sticky bit (A permission bit) was used to tag a file whether or not encrypted.
+          \item Read and write functions vfs$_{\_}$read() \& vfs$_{\_}$write()  at kernel level were tweaked accordingly.
+           \end{itemize}
+        %   \item Later Inodes were modified to create extra space for encryption.
+       
+    }
+    % \resumeNewSubItem{Self-Arranging Chairs}{IV Semester, IIT Mandi}{
+    %     \begin{itemize} 
+    %       \item Raspberry Pi controlled module which brings a chair back to its original position. 
+    %       \item Used Raspbian Python Code to fetch raw data from optical sensor and backtracking the traced path. 
+    %       \item Handling multiple input streams from optical sensor, sound, obstacle sensors while generating output for DC geared motors to retrace path. 
+    %       \item Project was inspired from Nissan Parking Chair Concept - \href{https://www.youtube.com/watch?v=O1D07dTILH0}{YouTube Link} 
+    %     \end{itemize}
+    % }
+    % \resumeNewSubItem{Institute Transport Portal}{III Semester, IIT Mandi}{
+    %   Part of course Applied Database Practicum. The project was for our Institute Transport System, it served the following purposes:
+    %   \begin{itemize}
+    %     \item  Displaying bus timetable 
+    %     \item Facility to book a vehicle
+    %     \item Making Complaints
+    %     \item Tracking a Bus
+    %   \end{itemize}
+    % Background: LAMP Stack, PHP, MySQL, Bootstrap, HTML, CSS
+    % }
+
+    % \resumeNewSubItem{Online Banking System}{III Semester, IIT Mandi} {
+    %   Part of course Applied Database Practicum. The portal provides the facility for online secure money transactions, creating accounts, checking balance and a robust database for the employee side. \\
+    %   Programming Background: MySQL, PHP, JavaScript, HTML, CSS, LAMP
+    % }
+
+    % \resumeNewSubItem{Attendance Machine}{II Semester, IIT Mandi}{
+    %   \begin{itemize} 
+    %     \item The project was to mark attendance using ID-Cards
+    %     \item ID-Cards contains Roll numbers of students in binary format.
+    %     \item Used Embedded C and Arduino-Mega to mark attendance.
+    %   \end{itemize}
+    % }
+
+    % \resumeNewSubItem{Line Follower Robot}{I Semester, IIT Mandi}{
+    %   \begin{itemize} 
+    %     \item Used Embedded C and AVR Studio to program an AtMega16 microcontroller 
+    %   \end{itemize}
+    % }
+
+  \resumeSubHeadingListEnd
+
+
+% %-----------COURSE WORK-----------------
+% \section{Course Work}
+%   \resumeSubHeadingListStart
+%   \begin{itemize}
+%   	\begin{minipage}{0.5\linewidth}
+%         \item Computation for Engineers
+%         \item Advanced Data Structures and Algorithms
+%         \item Information and Database Systems
+%         \item Communication and Distributing Process 
+%         \item Deep Learning and Application
+%   	\end{minipage}
+%   	\begin{minipage}{0.45\linewidth}
+%         \item System Practicum
+%         \item Pattern Recognition 
+%         \item Artificial Intelligence
+%         \item Mathematical Foundations of Computer Science 
+%         \item Computer Organization
+%   	\end{minipage}
+%   \end{itemize}
+%   \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Indian Institute of Technology Mandi}{Mandi, Himachal Pradesh}
+      {B.Tech in Computer Science and Engineering;  CGPA: 7.17}{Aug. 2014 -- May. 2018}
+    \resumeSubheading
+      {Kapil Gyanpeeth}{Mansarover, Jaipur}
+      {Higher Secondary;  Percentage: 91.8\% }{2013}
+    \resumeSubheading
+      {Kapil Gyanpeeth}{Mansarover, Jaipur}
+      {Senior Secondary;  CGPA: 7.8 }{2011}
+  \resumeSubHeadingListEnd
+  
+% --------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+    \item{
+     \textbf{Programming Languages}{: Java, Python, C++}
+     \hfill
+    }
+    \item{
+      \textbf{Python Packages}{: Tensorflow, Keras, OpenCV}
+      \hfill
+    }
+    \item{
+       \textbf{Web}{: Angular 6, RxJS}
+      \hfill
+    }
+    \item{
+      \textbf{Software Packages}{: Android Studio, Intellij Idea Community Edition}
+      \hfill
+    }
+    \item{
+      \textbf{Platforms}{:Mac and Linux}
+      \hfill
+    }
+    \item{
+    \textbf{Others}{: Docker, Tensorflow Serving}
+   }
+ \resumeSubHeadingListEnd
+
+
+
+
+
+
+%-----------SCHOLASTIC ACHIEVEMENTS-----------------
+% \section{Scholastic Achievement}
+%   \resumeSubHeadingListStart 
+%   \begin{itemize}
+%     \item Selected for the Pre-Elimination Round of Snack Down, 2016\\ (CodeChef's annual multi-round programming competition)
+%     \item ACM-ICPC India Regionals, Online Preliminary Round 2016 – Rank 1179, Team SPDCode
+%     \item Google APAC 2017 University Test Round E – Rank 1177, Handle deepakks19995
+%     \item JEE Advanced AIR – 2486 (Gen, CML)
+%   \end{itemize}
+%   \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
