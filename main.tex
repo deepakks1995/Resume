@@ -22,6 +22,9 @@
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
+% Color definitions
+\definecolor{secondColor}{RGB}{55, 68, 88}
+
 % Adjust margins
 % \addtolength{\oddsidemargin}{-0.175in}
 % \addtolength{\evensidemargin}{-0.575in}
@@ -39,7 +42,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-8pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-7pt}]
+}{}{0em}{}[\color{secondColor}\titlerule \vspace{-8pt}]
 
 %-------------------------
 % Custom commands
@@ -51,14 +54,14 @@
 
 \newcommand{\resumeNewItem}[3]{
   \item\small{
-    \textbf{#1:}{\hfill \vspace{3pt}{#2}\\}{ #3}
+    \textbf{\color{secondColor}{#1:}}{\hfill \vspace{3pt}{#2}\\}{ #3}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #2 \\
+      \textbf{\color{secondColor}{#1}} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -70,60 +73,77 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]\vspace{5pt}}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}\footnotesize}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\customItem}{\item}
+
+
+
+
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 
 \begin{document}
 
 %----------HEADING-----------------
 \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+
 \hspace{-18pt}\begin{tabular}{l}
-\textbf{{\Large {Deepak Sharma}}} \\
-  Associate Software Engineer, 1+ years exp \\
-  Computer Science Undergrad, IIT Mandi \\
-  \href{mailto:deepakks1995@gmail.com}{deepakks1995@gmail.com}
-\end{tabular} &
-\begin{tabular}{r}
-  \faGithub\href{https://github.com/deepakks1995}{ deepakks1995} \\
-    \faLinkedin\href{https://www.linkedin.com/in/deepakks1995}{ deepakks1995} \\ 
-  +91-8894054791
-\end{tabular}
+\textbf{{\LARGE {Deepak Sharma}}}
+\vspace{1pt} \\
+\textbf{\large{\textcolor{secondColor}{Associate Software Engineer}}}
+\vspace{2pt} \\
+\footnotesize{Experienced Software Developer with 1+ year of experience. Strong in design and intuitive problem-solving skills. Proficient in JAVA,}\\
+\footnotesize{Python, Data Structures and Algorithms, and Tensorflow. Passionate about implementing and designing new products and learning new } \\
+ \footnotesize{technologies. Looking to work for an organization which provides me the opportunity to grow along with the organization's objective}
+%   Computer Science Undergrad, IIT Mandi \\
+% \vspace{5pt}
+\end{tabular}\\
+\vspace{5pt}
+\hspace{-14pt}\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.1pt}} \\
+\hspace{-18pt}\begin{tabular}{cccc}
+  \Letter \href{mailto:deepakks1995@gmail.com}{  deepakks1995@gmail.com} &\hspace{55pt}
+  \faGithub\href{https://github.com/deepakks1995}{ deepakks1995} &\hspace{55pt}
+  \faLinkedin\href{https://www.linkedin.com/in/deepakks1995}{ deepakks1995} &\hspace{55pt}
+  \faMobile{ +91-8894054791} 
+\end{tabular} \\
+\hspace{-14pt}\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.1pt}}
+
 \end{tabular*}
 
 % % --------PROGRAMMING SKILLS------------
 % \vspace{-2pt}
 % \section{Programming Skills}
 %  \resumeSubHeadingListStart
-%     \item{
+%     \customItem{
 %      \textbf{Programming Languages}{: Java, Python, C++}
 %      \hfill
 %     }
 %     \vspace{-5pt}
-%     \item{
+%     \customItem{
 %       \textbf{Python Library}{: Tensorflow, Keras, OpenCV}
 %       \hfill
 %     }
 %     \vspace{-5pt}
-%     \item{
+%     \customItem{
 %       \textbf{Web}{: Angular 6, RxJS, Angular Material}
 %       \hfill
 %     }
 %     \vspace{-5pt}
-%     % \item{
+%     % \customItem{
 %     %   \textbf{Software Packages}{: Android Studio, Intellij Idea Community Edition}
 %     %   \hfill
 %     % }
 %     % \vspace{-5pt}
-%     % \item{
+%     % \customItem{
 %     %   \textbf{Platforms}{:Mac and Linux}
 %     %   \hfill
 %     % }
 %     % \vspace{-5pt}
-%     \item{
+%     \customItem{
 %     \textbf{Others}{: Docker, Tensorflow Serving, TFLite, Nginx}
 %   }
 %  \resumeSubHeadingListEnd
@@ -136,48 +156,49 @@
       {Khosla Labs}{Bangalore, India}
       {Associate Software Engineer}{July 2018 - Present}
       \resumeItemListStart
-        \item {
-            Build image classifiers (Mobilenet), train multiple object detection models like Mask-RCNN, Faster-RCNN etc. \small{\textbf{\textit{(Tensorflow, Keras, Python)}}}
+        \customItem {
+            Lead the ML team to build multiple products using image classifiers (Mobilenet),  object detection models like Mask-RCNN, Faster-RCNN etc to remove third party dependencies. \scriptsize{\textbf{\textit{(Tensorflow, Keras, Python)}}}
         }
         \vspace{-2pt}
-        \item {
-            Deployed tensorflow models to server and mobile \small{\textbf{\textit{(TensorFlow Serving, TFLite, Docker, Nginx)}}}
+        \customItem {
+            Designed and implemented micro-service exposing REST Api's for machine learning models later deploying ML Models to docker containers and mobile.
+            \scriptsize{\textbf{\textit{(Python, TensorFlow Serving, TFLite, Docker, Nginx, gRPC)}}}
         }
         \vspace{-2pt}
-        \item {
-            Built parser library for multiple documents, extracting fields from response of Google Vision API \small{\textbf{\textit{(Java)}}}
+        \customItem {
+            Built a parser library for multiple documents, extracting fields from response of Google Vision API \scriptsize{\textbf{\textit{(Java)}}}
         }
         
         \vspace{-2pt}
-        \item {
-            Built a Document scanner to detect the edges of document while scanning. \small{\textbf{\textit{(OpenCV, Python)}}}
+        \customItem {
+            Built a Document scanner to detect the edges of document while scanning. \scriptsize{\textbf{\textit{(OpenCV, Python)}}}
         }
         \vspace{-2pt}
-        \item {
-            Built a library for handling images mainly text detection (bounding box), noise addition, random background addition, rotation, cropping etc. \small{\textbf{\textit{(Python, OpenCV)}}}
+        \customItem {
+            Built a library for handling images, mainly text detection (bounding box), noise addition, random background addition, rotation, cropping etc. \scriptsize{\textbf{\textit{(Python, OpenCV)}}}
             % Used OpenCv to implement OpenCv's MSER algorithm for getting bounding boxes around texts, later build a python library to add noise around an ID image also supporting random background addition(training Object Detection), rotation, cropping around the edges.
         }
         \vspace{-2pt}
-        \item {
+        \customItem {
             Worked in a team handling a set of multi-tenant micro-services. Developed new micro-services,
-            enhanced database schema and testing frameworks to accommodate new use cases and built API's. \small{\textbf{\textit{(Java, Spring Boot, Nginx)}}}
+            enhanced database schema and testing frameworks to accommodate new use cases and built API's. \scriptsize{\textbf{\textit{(Java, Spring Boot, Nginx)}}}
         }
         \vspace{-2pt}
-        \item {
-            Developed a web portal for client on-boarding, service subscription, balance topup. \small{\textbf{\textit{(Angular 6, RxJs)}}}
+        \customItem {
+            Developed a web portal for client on-boarding, service subscription, balance topup. \scriptsize{\textbf{\textit{(Angular 6, RxJs)}}}
         }
         
-        \item {
-            Developed and managed backend API's and android app, requiring QR Code parsing from camera as well as from scanned Pdf, Compressed XML parsing and verifying its signature. \small{\textbf{\textit{(Java, Spring Boot, Android)}}}
+        \customItem {
+            Developed and managed backend API's and android app, requiring QR Code parsing from camera as well as from scanned Pdf, Compressed XML parsing and verifying its signature. \scriptsize{\textbf{\textit{(Java, Spring Boot, Android)}}}
         }
       
-    %   \item {
+    %   \customItem {
     %         Worked with the data migration team to map older databases to newer ones, and then to redirect monolith api's to their corresponding microservices.
     %     }
-        % \item {
+        % \customItem {
         %     Worked on proprietary framework, built on spring boot for api development.
         % }
-        % \item {
+        % \customItem {
         %     Integrated the developed api's with the testing framework, also extended the framework to support functional testing using mockito. Created and executed unit tests and performed basic api testing.
         % }
         
@@ -192,16 +213,16 @@
       
       \resumeItemListStart
             \vspace{6pt}
-            Developed a data visualisation tool supporting multiple interactive visualisation like Pie Charts, Tree Map, Forced Directed Graphs etc. \small{\textbf{\textit{(AngularJS, D3JS, RickshawJS)}}}
+            Developed a data visualisation tool supporting multiple interactive visualisation like Pie Charts, Tree Map, Forced Directed Graphs etc. \scriptsize{\textbf{\textit{(AngularJS, D3JS, RickshawJS)}}}
             
-        % \item {
+        % \customItem {
             
         %     Developed a dashboard named 'Data-Juno Monitor' on top of Angular JS framework to feed live data into different visualizations 
         % }
-        % \item {
+        % \customItem {
         %     Used D3js and Rickshaw JS(an open-source JavaScript toolkit) for implementing interative visualizations like Tree Map, Pie Charts, Forced Directed Graphs etc.
         % }
-        % \item
+        % \customItem
         %   {My work also included writing Android Background Services to fetch data from the client side}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
@@ -213,58 +234,58 @@
       Built a neural network that implements deep hashing and convert an image into a low dimensional binary vector (hash). Dataset consists of bio-metric images like fingerprints, iris, knuckle images etc. Challenges include:
       \begin{itemize}
         % \vspace{-6pt}
-        \item Handling alignment, translation of images.
+        \customItem Handling alignment, translation of images.
         % \vspace{-3pt}
-        \item Minimizing quantization loss of obtained binary vectors.
+        \customItem Minimizing quantization loss of obtained binary vectors.
         % \vspace{-3pt}
-        \item Propose an efficient indexing problem. 
+        \customItem Propose an efficient indexing problem. 
       \end{itemize}
     %   \vspace{-4pt}
-      Implemented \href{https://arxiv.org/abs/1801.08360}{DADH} network, as to get the distance between the binary encoding of the bio-metric images. Images were preprocessed using an Auto Encoder which was trained on FVC2002, FVC2004 and FVC2006 dataset. \small{\textbf{\textit{(Tensorflow, Keras, Python, OpenCV)}}}
+      Implemented \href{https://arxiv.org/abs/1801.08360}{DADH} network, as to get the distance between the binary encoding of the bio-metric images. Images were preprocessed using an Auto Encoder which was trained on FVC2002, FVC2004 and FVC2006 dataset. \scriptsize{\textbf{\textit{(Tensorflow, Keras, Python, OpenCV)}}}
     }
 
     \resumeNewSubItem{\href{https://github.com/deepakks1995/Fingerprint_Sensor_Classification}{FPSensorNet-A Deep CNN for Fingerprint Sensors Classification}}{(Mar 2017 - May 2017), IIT Mandi}{
-        Project aimed at classifying fingerprint images on the basis of source sensors. \small{\textbf{\textit{(Tensorflow, Keras, Python, OpenCV)}}}
+        Project aimed at classifying fingerprint images on the basis of source sensors. \scriptsize{\textbf{\textit{(Tensorflow, Keras, Python, OpenCV)}}}
         \begin{itemize} 
             % \vspace{-6pt}
-          \item Resnet50 layer network vs VGG16 was used to extract quality features of images.
+          \customItem Resnet50 layer network vs VGG16 was used to extract quality features of images.
         %   \vspace{-3pt}
-          \item Resnet50 layers were pruned and unnecessary layers were removed by applying a dropout 
+          \customItem Resnet50 layers were pruned and unnecessary layers were removed by applying a dropout 
         %   \vspace{-3pt}
-          \item Added various factors such as Noise, Occlusion, Rotation to test the efficiency of network
-          % \item Paper "FPSensorNet: A Deep CNN for Fingerprint Sensors Classification" submitted to WIFS 2017.
+          \customItem Added various factors such as Noise, Occlusion, Rotation to test the efficiency of network
+          % \customItem Paper "FPSensorNet: A Deep CNN for Fingerprint Sensors Classification" submitted to WIFS 2017.
         \end{itemize}
         
     }
     % \vspace{6pt}
     \resumeNewSubItem{On the Fly Encryptor}{ VI Semester, IIT Mandi}{
-        Modified Linux Kernel 4.1.0 to implement a file encryption mechanism without affecting user experience. \small{\textbf{\textit{(C, C++)}}}
+        Modified Linux Kernel 4.1.0 to implement a file encryption mechanism without affecting user experience. \scriptsize{\textbf{\textit{(C, C++)}}}
         \begin{itemize} 
             % \vspace{-6pt}
-          \item Sticky bit was used to tag a file. 
-          \item Read and write functions vfs$_{\_}$read() \& vfs$_{\_}$write() at kernel level were tweaked accordingly.
+          \customItem Sticky bit was used to tag a file. 
+          \customItem Read and write functions vfs$_{\_}$read() \& vfs$_{\_}$write() at kernel level were tweaked accordingly.
         %   \vspace{-3pt}
-        %   \item 
+        %   \customItem 
            \end{itemize}
-        %   \item Later Inodes were modified to create extra space for encryption.
+        %   \customItem Later Inodes were modified to create extra space for encryption.
        
     }
     % \vspace{6pt}
     % \resumeNewSubItem{Self-Arranging Chairs}{IV Semester, IIT Mandi}{
     %     \begin{itemize} 
-    %       \item Raspberry Pi controlled module which brings a chair back to its original position. 
-    %       \item Used Raspbian Python Code to fetch raw data from optical sensor and backtracking the traced path. 
-    %       \item Handling multiple input streams from optical sensor, sound, obstacle sensors while generating output for DC geared motors to retrace path. 
-    %       \item Project was inspired from Nissan Parking Chair Concept - \href{https://www.youtube.com/watch?v=O1D07dTILH0}{YouTube Link} 
+    %       \customItem Raspberry Pi controlled module which brings a chair back to its original position. 
+    %       \customItem Used Raspbian Python Code to fetch raw data from optical sensor and backtracking the traced path. 
+    %       \customItem Handling multiple input streams from optical sensor, sound, obstacle sensors while generating output for DC geared motors to retrace path. 
+    %       \customItem Project was inspired from Nissan Parking Chair Concept - \href{https://www.youtube.com/watch?v=O1D07dTILH0}{YouTube Link} 
     %     \end{itemize}
     % }
     % \resumeNewSubItem{Institute Transport Portal}{III Semester, IIT Mandi}{
     %   Part of course Applied Database Practicum. The project was for our Institute Transport System, it served the following purposes:
     %   \begin{itemize}
-    %     \item  Displaying bus timetable 
-    %     \item Facility to book a vehicle
-    %     \item Making Complaints
-    %     \item Tracking a Bus
+    %     \customItem  Displaying bus timetable 
+    %     \customItem Facility to book a vehicle
+    %     \customItem Making Complaints
+    %     \customItem Tracking a Bus
     %   \end{itemize}
     % Background: LAMP Stack, PHP, MySQL, Bootstrap, HTML, CSS
     % }
@@ -276,15 +297,15 @@
 
     % \resumeNewSubItem{Attendance Machine}{II Semester, IIT Mandi}{
     %   \begin{itemize} 
-    %     \item The project was to mark attendance using ID-Cards
-    %     \item ID-Cards contains Roll numbers of students in binary format.
-    %     \item Used Embedded C and Arduino-Mega to mark attendance.
+    %     \customItem The project was to mark attendance using ID-Cards
+    %     \customItem ID-Cards contains Roll numbers of students in binary format.
+    %     \customItem Used Embedded C and Arduino-Mega to mark attendance.
     %   \end{itemize}
     % }
 
     % \resumeNewSubItem{Line Follower Robot}{I Semester, IIT Mandi}{
     %   \begin{itemize} 
-    %     \item Used Embedded C and AVR Studio to program an AtMega16 microcontroller 
+    %     \customItem Used Embedded C and AVR Studio to program an AtMega16 microcontroller 
     %   \end{itemize}
     % }
 
@@ -309,18 +330,18 @@
 % %   \resumeSubHeadingListStart
 %   \begin{itemize}
 %   	\begin{minipage}{0.5\linewidth}
-%         % \item Computation for Engineers
-%         \item Advanced Data Structures and Algorithms
-%         \item Information and Database Systems
-%         % \item Communication and Distributing Process 
-%         \item Deep Learning and Application
+%         % \customItem Computation for Engineers
+%         \customItem Advanced Data Structures and Algorithms
+%         \customItem Information and Database Systems
+%         % \customItem Communication and Distributing Process 
+%         \customItem Deep Learning and Application
 %   	\end{minipage}
 %   	\begin{minipage}{0.45\linewidth}
-%         % \item System Practicum
-%         \item Pattern Recognition 
-%         % \item Artificial Intelligence
-%         % \item Mathematical Foundations of Computer Science 
-%         \item Computer Organization
+%         % \customItem System Practicum
+%         \customItem Pattern Recognition 
+%         % \customItem Artificial Intelligence
+%         % \customItem Mathematical Foundations of Computer Science 
+%         \customItem Computer Organization
 %   	\end{minipage}
 %   \end{itemize}
 %   \resumeSubHeadingListEnd
@@ -331,12 +352,12 @@
 
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
         \begin{tabular}{l}
-            \textbf {Indian Institute of Technology, Mandi} \\
+            \textbf {\color{secondColor}{Indian Institute of Technology, Mandi}} \\
             \small{B.Tech in Computer Science and Engineering} \\
             \small{(2014-2018)}
         \end{tabular} &
         \begin{tabular}{r}
-            \textbf{Kapil Gyanpeeth, Jaipur}\\
+            \textbf{\color{secondColor}{Kapil Gyanpeeth, Jaipur}}\\
             \small{Higher Secondary} \\ 
             \small{91.8\% (2013)}
         \end{tabular}
@@ -359,10 +380,10 @@
 % \section{Scholastic Achievement}
 %   \resumeSubHeadingListStart 
 %   \begin{itemize}
-%     \item Selected for the Pre-Elimination Round of Snack Down, 2016\\ (CodeChef's annual multi-round programming competition)
-%     \item ACM-ICPC India Regionals, Online Preliminary Round 2016 – Rank 1179, Team SPDCode
-%     \item Google APAC 2017 University Test Round E – Rank 1177, Handle deepakks19995
-%     \item JEE Advanced AIR – 2486 (Gen, CML)
+%     \customItem Selected for the Pre-Elimination Round of Snack Down, 2016\\ (CodeChef's annual multi-round programming competition)
+%     \customItem ACM-ICPC India Regionals, Online Preliminary Round 2016 – Rank 1179, Team SPDCode
+%     \customItem Google APAC 2017 University Test Round E – Rank 1177, Handle deepakks19995
+%     \customItem JEE Advanced AIR – 2486 (Gen, CML)
 %   \end{itemize}
 %   \resumeSubHeadingListEnd
 
