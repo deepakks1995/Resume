@@ -61,7 +61,7 @@
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\color{secondColor}{#1}} & #2 \\
+      \textbf{\small\color{secondColor}{#1}} & \small #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-5pt}
 }
@@ -73,7 +73,7 @@
 
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]\vspace{5pt}}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}\footnotesize}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 \newcommand{\customItem}{\item}
 
@@ -157,43 +157,36 @@
     
     \resumeSubheading
       {Khosla Labs}{Bangalore, India}
-      {Associate Software Engineer}{July 2018 - Present}
+      {Software Engineer}{July 2018 - Present}\\
+      
+      \footnotesize{Lead the ML team to build multiple products using image classifiers (Mobilenet),  object detection models like Mask-RCNN, Faster-RCNN etc to remove third party dependencies. \scriptsize{\textbf{\textit{(Tensorflow, Keras, Python)}}}}
       \resumeItemListStart
-        \customItem {
-            Lead the ML team to build multiple products using image classifiers (Mobilenet),  object detection models like Mask-RCNN, Faster-RCNN etc to remove third party dependencies. \scriptsize{\textbf{\textit{(Tensorflow, Keras, Python)}}}
-        }
-        \vspace{-2pt}
         \customItem {
             Designed and implemented micro-service exposing REST Api's for machine learning models later deploying ML Models to docker containers and mobile.
             \scriptsize{\textbf{\textit{(Python, TensorFlow Serving, TFLite, Docker, Nginx, gRPC)}}}
         }
-        \vspace{-2pt}
+        \vspace{-1pt}
         \customItem {
             Built a parser library for multiple documents, extracting fields from response of Google Vision API \scriptsize{\textbf{\textit{(Java)}}}
         }
         
-        \vspace{-2pt}
+        \vspace{-1pt}
         \customItem {
             Built a Document scanner to detect the edges of document while scanning. \scriptsize{\textbf{\textit{(OpenCV, Python)}}}
         }
-        \vspace{-2pt}
+        \vspace{-1pt}
         \customItem {
             Built a library for handling images, mainly text detection (bounding box), noise addition, random background addition, rotation, cropping etc. \scriptsize{\textbf{\textit{(Python, OpenCV)}}}
             % Used OpenCv to implement OpenCv's MSER algorithm for getting bounding boxes around texts, later build a python library to add noise around an ID image also supporting random background addition(training Object Detection), rotation, cropping around the edges.
         }
-        \vspace{-2pt}
-        \customItem {
-            Worked in a team handling a set of multi-tenant micro-services. Developed new micro-services,
-            enhanced database schema and testing frameworks to accommodate new use cases and built API's. \scriptsize{\textbf{\textit{(Java, Spring Boot, Nginx)}}}
-        }
-        \vspace{-2pt}
-        \customItem {
-            Developed a web portal for client on-boarding, service subscription, balance topup. \scriptsize{\textbf{\textit{(Angular 6, RxJs)}}}
-        }
-        
-        \customItem {
-            Developed and managed backend API's and android app, requiring QR Code parsing from camera as well as from scanned Pdf, Compressed XML parsing and verifying its signature. \scriptsize{\textbf{\textit{(Java, Spring Boot, Android)}}}
-        }
+        % \vspace{-2pt}
+        % \customItem {
+            
+        % }
+        % \vspace{-2pt}
+        % \customItem {
+        %     Developed a web portal for client on-boarding, service subscription, balance topup. \scriptsize{\textbf{\textit{(Angular 6, RxJs)}}}
+        % }
       
     %   \customItem {
     %         Worked with the data migration team to map older databases to newer ones, and then to redirect monolith api's to their corresponding microservices.
@@ -207,8 +200,14 @@
         
         
       \resumeItemListEnd
-    
-    
+      \vspace{2pt}
+        Managed a small team for a new product development requiring KYC Verification, supporting both web and Android platforms as well as exposing REST Api's to the clients. \scriptsize{\textbf{\textit{(Java, Spring Boot, Android)}}}
+        
+        Enhanced the Gateway Micro-service to support JWT Token Authorization, exposing REST APIs for encryption and decryption of token, later redirecting requests to their supporting micro-services after a successful auth. \scriptsize{\textbf{\textit{(Java, Spring Boot, Nginx)}}}
+        
+        Worked in a team handling a set of multi-tenant micro-services. Developed new micro-services,
+        enhanced database schema and testing frameworks to accommodate new use cases and built REST API's. \scriptsize{\textbf{\textit{(Java, Spring Boot, Nginx)}}}
+    \vspace{4pt}
     
     \resumeSubheading
       {Khosla Labs}{Bangalore, India}
@@ -216,7 +215,7 @@
       
       \resumeItemListStart
             \vspace{6pt}
-            Developed a data visualisation tool supporting multiple interactive visualisation like Pie Charts, Tree Map, Forced Directed Graphs etc. \scriptsize{\textbf{\textit{(AngularJS, D3JS, RickshawJS)}}}
+            \footnotesize{Developed a data visualisation tool supporting multiple interactive visualisation like Pie Charts, Tree Map, Forced Directed Graphs etc. \scriptsize{\textbf{\textit{(AngularJS, D3JS, RickshawJS)}}}}
             
         % \customItem {
             
